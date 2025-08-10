@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload - Retina Detection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<nav>
+    <div class="logo">Retinopathy</div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#services">Services</a></li>
+    </ul>
+</nav>
+
+
+<section class="upload-section">
+    <h2>Upload Your Eye Image</h2>
+    <form id="imageForm">
+        <label for="eyeImage">Choose Image:</label>
+        <input type="file" id="eyeImage" name="eyeImage" accept="image/*" required>
+
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<script>
+    document.getElementById('imageForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const imageInput = document.getElementById('eyeImage');
+        const file = imageInput.files[0];
+
+        if (file) {
+            const reader = new FileReader();
+
+            reader.onload = function(e) {
+                
+                localStorage.setItem('eyeImage', e.target.result);
+
+                
+                window.location.href = 'result.html';
+            };
+
+            reader.readAsDataURL(file);
+        }
+    });
+</script>
+
+</body>
+</html>
+
