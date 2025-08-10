@@ -1,0 +1,219 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary-color: #003366;
+    --secondary-color: #007acc;
+    --background-color: #f7fafc;
+    --text-color: #333;
+    --button-color: #007acc;
+    --button-hover: #005f99;
+    --input-border: #cccccc;
+    --input-focus: #005f99;
+}
+
+
+body {
+    background-color:rgb(162, 197, 228);
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+nav .logo {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+}
+
+
+section {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+
+.home-section {
+    background: linear-gradient(to right, rgba(0, 51, 102, 0.8), rgba(120, 179, 206, 0.8)),
+                url('path_to_your_eye_image.jpg') center/cover no-repeat; 
+    color: rgb(1, 1, 29);
+    padding: 4rem 2rem;
+    text-align: center;
+    background-blend-mode: overlay;  
+}
+
+
+.home-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.home-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.start-btn {
+    background-color: rgb(7, 60, 81);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.start-btn:hover {
+    background-color: var(--button-hover);
+}
+
+
+label {
+    display: block;
+    font-weight: 600;
+    margin: 1rem 0 0.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="file"],
+button[type="submit"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--input-border);
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="file"]:focus {
+    border-color: var(--input-focus);
+    outline: none;
+}
+
+button[type="submit"] {
+    background-color: var(--button-color);
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--button-hover);
+}
+
+.service {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.service p {
+    color: var(--text-color);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .home-section h1 {
+        font-size: 2rem;
+    }
+
+    .home-section p {
+        font-size: 1rem;
+    }
+
+    .start-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+}
+
+
+
+.hospital-list {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+    text-align: left;
+}
+
+.hospital-list li {
+    font-size: 1rem;
+    padding: 0.3rem 0;
+    line-height: 1.4;
+}
